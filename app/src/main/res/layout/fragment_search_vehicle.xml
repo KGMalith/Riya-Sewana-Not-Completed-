@@ -27,7 +27,7 @@
              android:layout_width="match_parent"
              android:layout_height="wrap_content"
              android:layout_marginTop="80dp"
-             android:id="@+id/recycler_vehicle"/>
+             android:id="@+id/recycler_myads"/>
 
   <!--  <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"

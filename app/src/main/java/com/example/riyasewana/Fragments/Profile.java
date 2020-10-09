@@ -89,10 +89,7 @@ public class Profile extends Fragment {
        donateUs.setOnClickListener(new View.OnClickListener() {
            // @Override
             public void onClick(View view) {
-                DonateUs donateUs = new DonateUs();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container_fragment, donateUs);
-                transaction.commit();
+                startActivity(new Intent(getActivity(),DonateUs.class));
                 }
         });
 

@@ -1,20 +1,17 @@
 package com.example.riyasewana.Fragments;
 
+import android.graphics.Color;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 
-import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.SearchView;
+import android.widget.Button;
 
 import com.example.riyasewana.Adapters.VehicleSearchAdapter;
 import com.example.riyasewana.Models.VehicleModel;
@@ -34,6 +31,7 @@ public class SearchVehicle extends Fragment {
 
     RecyclerView recyclerView;
     List<VehicleModel> vehicleList;
+    Button favourite;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -41,11 +39,13 @@ public class SearchVehicle extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_search_vehicle, container, false);
 
-        recyclerView = view.findViewById(R.id.recycler_vehicle);
+        favourite = view.findViewById(R.id.favbtn);
+        recyclerView = view.findViewById(R.id.recycler_myads);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         recyclerView.setAdapter(new VehicleSearchAdapter(vehicleData()));
+
 
 
 
@@ -55,7 +55,7 @@ public class SearchVehicle extends Fragment {
     private List<VehicleModel> vehicleData() {
 
         vehicleList = new ArrayList<VehicleModel>();
-        vehicleList.add(new VehicleModel(R.drawable.toyota_prius, "Toyota Prius", "Rs.3,480,000", "127,000 km", "Auto", "Dehiwala"));
+        vehicleList.add(new VehicleModel(R.drawable.toyota_prius,"Toyota Prius", "Rs.3,480,000", "127,000 km", "Auto", "Dehiwala"));
         vehicleList.add(new VehicleModel(R.drawable.hyundai_xg30, "Hyundai XG30", "Rs.1,280,000", "15,000 km", "Auto", "Athurugiriya"));
         vehicleList.add(new VehicleModel(R.drawable.suzuki_alto_2010, "Suzuki Alto 2010", "Rs180,000", "500 km", "Auto", "Kadana"));
         vehicleList.add(new VehicleModel(R.drawable.toyota_premio, "Toyota Premio 2013", "Rs7,650,000", "30,000 km", "Auto", "Kurunagela"));
