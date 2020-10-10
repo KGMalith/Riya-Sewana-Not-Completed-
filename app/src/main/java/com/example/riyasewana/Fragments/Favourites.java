@@ -54,9 +54,14 @@ public class Favourites extends Fragment {
     private List<VehicleModel> vehicleData() {
 
         vehicleList = new ArrayList<VehicleModel>();
-        vehicleList.add(new VehicleModel(R.drawable.toyota_premio, "Toyota Premio 2013", "Rs7,650,000", "30,000 km", "Auto", "Kurunagela"));
-        vehicleList.add(new VehicleModel(R.drawable.toyota_vitz_2007, "Toyota Vitz 2004", "Rs180,000", "2,500 km", "Auto", "Gampaha"));
-        vehicleList.add(new VehicleModel(R.drawable.toyota_land_cruiser_prado, "Toyota Land Cruiser 2005", "Rs130,000", "9,500,000 km", "Auto", "Malabe"));
+        VehicleModel toypta_prius = new VehicleModel("0", R.drawable.toyota_prius, "Toyota-Prius", "Rs.3,480,000", "127,000 km", "Auto", "Dehiwala");
+        vehicleList.add(toypta_prius);
+
+        VehicleModel toyota_hyundai = new VehicleModel("1",R.drawable.hyundai_xg30, "Hyundai-XG30", "Rs.1,280,000", "15,000 km", "Auto", "Athurugiriya");
+        vehicleList.add(toyota_hyundai);
+
+        VehicleModel suzuki_alto = new VehicleModel("2",R.drawable.suzuki_alto_2010, "Suzuki-Alto-2010", "Rs.180,000", "500 km", "Auto", "Kadana");
+        vehicleList.add(suzuki_alto);
 
         return vehicleList;
     }

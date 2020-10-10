@@ -63,9 +63,11 @@ public class MyAds extends Fragment {
     private List<VehicleModel> vehicleData() {
 
         vehicleList = new ArrayList<VehicleModel>();
-        vehicleList.add(new VehicleModel(R.drawable.toyota_prius,"Toyota Prius", "Rs.3,480,000", "127,000 km", "Auto", "Dehiwala"));
-        vehicleList.add(new VehicleModel(R.drawable.hyundai_xg30, "Hyundai XG30", "Rs.1,280,000", "15,000 km", "Auto", "Athurugiriya"));
+        VehicleModel bike_tvs_wego_2010 = new VehicleModel("3",R.drawable.bike_tvs_wego_2010, "Bike-TVS-Wego-2010", "Rs.272,900", "200 km", "Auto", "Mahabage");
+        vehicleList.add(bike_tvs_wego_2010);
 
+        VehicleModel toyota_premio = new VehicleModel("4",R.drawable.toyota_premio, "Toyota-Premio-2013", "Rs.7,650,000", "30,000 km", "Auto", "Kurunagela");
+        vehicleList.add(toyota_premio);
         return vehicleList;
     }
 

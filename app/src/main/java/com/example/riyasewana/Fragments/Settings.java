@@ -1,6 +1,7 @@
 package com.example.riyasewana.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,7 +16,9 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.example.riyasewana.LoginRegister.Welcome;
 import com.example.riyasewana.R;
+import com.google.firebase.auth.FirebaseAuth;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -24,6 +27,7 @@ import com.example.riyasewana.R;
  */
 public class Settings extends Fragment {
 
+    ImageView signOut;
 
 
     public Settings() {
@@ -37,6 +41,17 @@ public class Settings extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_settings, container, false);
+        signOut = v.findViewById(R.id.sign_out);
+
+        signOut.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                FirebaseAuth.getInstance().signOut();
+                Intent i = new Intent(getContext(), Welcome.class);
+                startActivity(i);
+                getActivity().finish();
+            }
+        });
 
 
         return v;

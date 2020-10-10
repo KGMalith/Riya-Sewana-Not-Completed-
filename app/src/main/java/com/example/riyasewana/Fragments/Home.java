@@ -13,6 +13,8 @@ import android.widget.Button;
 
 import com.example.riyasewana.LoginRegister.Welcome;
 import com.example.riyasewana.R;
+import com.example.riyasewana.SearchParts.SearchParts;
+import com.example.riyasewana.SearchVehicle.SearchVehicles;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
@@ -40,24 +42,16 @@ public class Home extends Fragment {
 
         vehicles.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                SearchVehicle vehicles = new SearchVehicle();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container_fragment, vehicles);
-                transaction.commit();
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),SearchVehicles.class));
             }
-
         });
 
         parts.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                SearchParts parts = new SearchParts();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.container_fragment, parts);
-                transaction.commit();
+            public void onClick(View view) {
+                startActivity(new Intent(getActivity(),SearchParts.class));
             }
-
         });
 
 
