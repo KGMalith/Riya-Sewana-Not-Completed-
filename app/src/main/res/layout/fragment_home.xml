@@ -71,11 +71,11 @@
             android:textColor="@color/white"
             android:textSize="15sp"
             app:layout_constraintEnd_toStartOf="@+id/button"
-            app:layout_constraintStart_toEndOf="@+id/button3"
+            app:layout_constraintStart_toEndOf="@+id/contactHome"
             app:layout_constraintTop_toBottomOf="@+id/imageView23" />
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/contactHome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
